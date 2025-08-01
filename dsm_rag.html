@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+-->
+<html>
+	<head>
+		<title>DSM_RAG Project - Austin Kolvek</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/main.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
+			<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="Logo" style="height: 50px;"></a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#About Me" class="scrolly">About Me</a></li>
+						<li><a href="index.html#skills" class="scrolly">Skills</a></li>
+						<li>
+							<a href="side_projects.html">Side Projects</a>
+							<ul>
+								<li><a href="fifth_third_bank.html">Fifth Third Bank</a></li>
+								<li><a href="ai_personal_finance.html">Agentic AI Personal Finance Assistant</a></li>
+								<li><a href="dsm_rag.html">DSM RAG</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- Banner -->
+			<section id="banner" style="background-image: url('images/dsm2.jpg'); background-size: cover; background-position: center;">
+				<div class="content" style="text-align: center;">
+					<header class="major">
+						<h2>DSM RAG Project</h2>
+						<p>Diagnostic and Statistical Manual of Mental Disorders (DSM) RAG System</p>
+					</header>
+				</div>
+			</section>
+			<!-- Main Content -->
+			<section class="wrapper style1">
+				<div class="container">
+					<header>
+						<h3>Project Overview</h3>
+					</header>
+					<p>
+                        After speaking with clinical professionals, I learned that while the <strong>Diagnostic and Statistical Manual of Mental Disorders (DSM)</strong> is a key reference in diagnosis, most practitioners don’t have the time to consult it in detail for every patient. This insight inspired me to build a Retrieval-Augmented Generation (RAG) system tailored to the DSM—designed to help clinicians, researchers, or students access relevant diagnostic criteria quickly and think critically about alternative possibilities, all while staying grounded in authoritative source material.
+                    </p>
+
+                    <p>
+                        The system uses a multi-step agentic pipeline to generate precise, context-aware responses to mental health questions:
+                    </p>
+
+                    <h3>System Workflow</h3>
+                    <ol>
+                        <li>
+                            Ingest the DSM into a <strong>ChromaDB</strong>, pre-processing it into clean, queryable chunks for fast retrieval.
+                        </li>
+                        <li>
+                            Accept a user question via a <strong>Flask</strong> interface.
+                        </li>
+                        <li>
+                            Search a separate ChromaDB that stores conversation history to retrieve any relevant past context.
+                        </li>
+                        <li>
+                            Simultaneously query the DSM chunks for the most relevant content to support the question.
+                        </li>
+                        <li>
+                            Combine relevant conversation history and DSM excerpts to generate a grounded, <strong>GPT-powered</strong> answer.
+                        </li>
+                        <li>
+                            Include a “Clear History” feature so users can start fresh at any point.
+                        </li>
+                    </ol>
+
+                    <h3>Important Notes</h3>
+                    <ul>
+                        <li>This system is strictly <strong>non-commercial</strong> and built for exploration and educational purposes.</li>
+                        <li>All answers are generated using only two sources: the DSM and the conversation history.</li>
+                        <li>The system does not invent medical advice—it only responds within the limits of the DSM’s content.</li>
+                    </ul>
+
+                    <h3>Tech Stack</h3>
+                    <ul>
+                        <li><strong>Python</strong> for backend orchestration</li>
+                        <li><strong>LangChain</strong> for chaining retrieval and generation steps</li>
+                        <li><strong>OpenAI API</strong> for context-aware response generation</li>
+                        <li><strong>ChromaDB</strong> for vector-based semantic search (DSM + history)</li>
+                        <li><strong>Flask</strong> for an interactive front-end</li>
+                    </ul>
+
+                    <p>
+                        This project demonstrates how retrieval-augmented architectures can be adapted
+                        to high-stakes domains—offering speed, accuracy, and a fresh lens for diagnostic
+                        reflection, while remaining fully grounded in expert-vetted literature.
+
+                        Below is a video walkthrough of the system in action, showcasing its 
+                        capabilities and user interface.
+                    </p>
+
+					<!-- Optional: Add a video or GitHub button here if desired -->
+                     <div style="margin-top:2em; text-align:center;">
+						<h3>Dashboard Walkthrough Video</h3>
+						<iframe src="https://drive.google.com/file/d/1VPMj_KGgs7jZVpoVxtV-T9RqecVn8SLt/preview" 
+								width="900" 
+								height="420" 
+								allow="autoplay"
+								frameborder="0"
+								allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</section>
+			<!-- Footer -->
+			<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/austin-kolvek/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto:austinkolvek@yahoo.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
